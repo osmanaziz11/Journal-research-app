@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color-primary: #070707;
+  --bg-color-secondary: #0e0e0e;
+  --text-color: #ffffff;
+  --text-family-primary: 'Montserrat';
+  --text-family-secondary: 'Comfortaa';
+}
+body {
+  background-color: var(--bg-color-primary);
+}
+
+.main {
+  height: calc(100vh - 72px - 60px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: transparent;
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
+.main div {
+  z-index: 333333 !important;
+}
+/* Parent main layout  */
+
+/* Navbar  */
+
+/* topNav  */
+.__topNav {
+  height: 72px;
+}
+/* topNav  */
+
+/* bottomNav */
+.__bottomNav {
+  height: 60px;
+}
+.menu {
+  width: 40px;
+  height: 38px;
+  position: relative;
+  border-radius: 50px;
+  transition: all 0.5s;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 0.8;
+  /* cursor: not-allowed; */
+  overflow: hidden;
+  background-color: var(--bg-color-secondary);
+  position: relative;
+  /* pointer-events: none !important; */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 444444444 !important;
+}
+.menu p {
+  color: white !important;
+  font-size: 13px;
+}
+.menu:hover {
+  width: 240px !important;
+}
+.iconify:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.iconify {
+  transition: all 0.5s !important;
+  color: rgb(170, 168, 168);
+}
+.menu__active {
+  color: white !important;
+  position: absolute;
+  pointer-events: none !important;
+  /* font-size: 22px; */
+  transform: translate(-50%, -43%);
+}
+.menu__item {
+  transition: all 0.3s ease-in-out;
+}
+li.sb {
+  pointer-events: none !important;
+}
+/* bottomNav */
+/* Navbar  */
+
+/* Home  */
+.titleAnimation {
+  overflow: hidden;
+  transition: all 0.8s;
+  animation: typing 4s infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+/* Home  */
+
+/* Project  */
+.bg-tertiary {
+  background: #14141475;
+}
+/* Project  */
